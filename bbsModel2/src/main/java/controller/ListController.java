@@ -58,7 +58,7 @@ public class ListController extends HttpServlet {
 		params.put("page_block_end", page_block_end);
 		params.put("page_block_size", page_block_size);
 		
-		String pagingArea = BbsPage.pagingArea(total_page,page_no, page_block_start, page_block_end, "list?");
+		String pagingArea = BbsPage.pagingArea(total_page,page_no, page_block_start, page_block_end, "list?",search_category,search_word);
 		params.put("paging", pagingArea);
 		
 		req.setAttribute("bbsList", bbsList);
